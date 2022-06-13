@@ -1,0 +1,21 @@
+torch
+networkx
+numpy
+scikit-learn
+scipy
+ray
+tensorflow
+tensorflow-gan
+tensorflow-probability
+psutil
+pyemd
+grakel
+git+https://github.com/fabriziocosta/EDeN.git
+jupyter
+ipykernel
+ipython
+ipython-genutils
+# pip install torch-scatter torch-sparse torch-cluster torch-spline-conv torch-geometric -f https://data.pyg.org/whl/torch-1.11.0+cpu.html
+dgl
+PyGCL
+seaborn

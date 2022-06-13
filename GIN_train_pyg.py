@@ -2,6 +2,7 @@ import pickle
 
 import torch
 import copy
+import os
 import numpy as np
 import GCL.losses as L
 import GCL.augmentors as A
@@ -123,6 +124,9 @@ def get_infograph_model(dataset, args):
 
 
 def get_model(dataset, args):
+    if not os.path.exists('saved_models'):
+        os.makedirs('saved_models')
+
     if not isinstance(dataset[0], Data):
         pyg_dataset = make_dataset_ready_to_save(copy.deepcopy(dataset), parallel=args.is_parallel)
         make_dataset_from_saved_format(pyg_dataset, args.deg_feats, args.clus_feats, args.orbit_feats)
